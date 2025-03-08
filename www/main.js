@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $('.text').textillate({
         loop:true,
         sync:true,
@@ -21,5 +22,18 @@ $(document).ready(function () {
         speed:"0.15",
         autostart:true
       });
+
+      //siri message animation
+      $('.siri-message').textillate({
+        loop:true,
+        sync:true,
+        in:{
+            effect:"bounceIn",
+        },
+        out:{
+            effect:"bounceOut",
+        },
+
+    });
 
 }); 

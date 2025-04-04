@@ -23,17 +23,29 @@ $(document).ready(function () {
         autostart:true
       });
 
-      //siri message animation
-      $('.siri-message').textillate({
+    //siri message animation
+    $('.siri-message').textillate({
         loop:true,
         sync:true,
         in:{
-            effect:"bounceIn",
+            effect:"fadeInUp",
+            sync:true,
         },
         out:{
-            effect:"bounceOut",
+            effect:"fadeOutUp",
+            sync:true,
         },
 
+    });
+
+    //mic button click event
+
+    $("#MicBtn").click(function () { 
+        eel.playAssistantSound()
+        $("#Oval").attr("hidden", true);
+        $("#SiriWave").attr("hidden", false);
+        eel.allCommand()()
+        
     });
 
 }); 
